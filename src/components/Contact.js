@@ -45,6 +45,9 @@ const useStyle = makeStyles((theme) => ({
     position: "absolute",
     background: "#233",
     padding: "2rem",
+    [theme.breakpoints.down('sm')]: {
+      width: "16rem",
+    },
   },
   button: {
     color: "tomato",
@@ -132,6 +135,8 @@ const Contact = () => {
               label="Description"
               variant="outlined"
               fullWidth={true}
+              multiline
+              rows={4}
               margin="dense"
               size="medium"
               inputProps={{ style: { color: "white" } }}
